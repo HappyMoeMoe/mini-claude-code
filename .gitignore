@@ -1,0 +1,24 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+.mini-claude-code/
+
+
+# Local editor and agent settings
+.agents/
+.codex/
+.aws/
+.vscode/
+.idea/

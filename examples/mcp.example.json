@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "servers": {
+    "demo": {
+      "command": "/absolute/path/to/mini-cc/bin/python",
+      "args": ["/absolute/path/to/mini-claude-code/examples/mcp_server.py"],
+      "env_from": {},
+      "timeout_seconds": {"connect": 15, "list": 15, "call": 60},
+      "tools": {
+        "query": {"policy": "allow", "roles": ["lead", "subagent", "teammate"], "effect": "read"},
+        "write_note": {"policy": "ask", "roles": ["lead"], "effect": "write"},
+        "controlled_failure": {"policy": "allow", "roles": ["lead"], "effect": "read"}
+      }
+    }
+  }
+}
